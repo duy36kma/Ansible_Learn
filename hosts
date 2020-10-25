@@ -1,0 +1,12 @@
+#Local Test
+[all:vars]
+ansible_user='itc'
+ansible_become='yes'
+ansible_become_pass='{{ centos_pass }}'
+ansible_become_method='sudo'
+
+[ubuntu]
+172.16.10.4 ansible_become_user=root ansible_become_password=123456
+
+[centos] 
+172.16.10.16
